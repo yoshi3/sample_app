@@ -5,13 +5,11 @@ require "minitest/reporters"
 Minitest::Reporters.use!
 
 class ActiveSupport::TestCase
-  # 特定のワーカーではテストをパラレル実行する
+  # Run tests in parallel with specified workers
   parallelize(workers: :number_of_processors)
 
-  # すべてのテストがアルファベット順に実行されるよう、
-  #test/fixtures/*.ymlにあるすべてのfixtureをセットアップする
+  # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   fixtures :all
-  include ApplicationHelper
 
-  # （すべてのテストで使うその他のヘルパーメソッドは省略）
+  # Add more helper methods to be used by all tests here...
 end
