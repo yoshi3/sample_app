@@ -4,7 +4,6 @@ class MicropostTest < ActiveSupport::TestCase
 
   def setup
     @user = users(:michael)
-    # このコードは慣習的に正しくない
     @micropost = @user.microposts.build(content: "Lorem ipsum")
   end
 
